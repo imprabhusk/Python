@@ -11,7 +11,7 @@ stating the occurrences of the given letter.
 print("Welcome to the Letter Counter App")
 
 name = input("\nWhat is your name : ").title().strip()
-print("Hello", name.capitalize() + "!")
+print("\nHello", name.capitalize() + "!")
 
 print(
     "\nI will count the number of times that a specific letter occurs in a \
