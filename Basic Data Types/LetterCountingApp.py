@@ -11,6 +11,7 @@ stating the occurrences of the given letter.
 print("Welcome to the Letter Counter App")
 
 name = input("\nWhat is your name : ").title().strip()
+
 print("\nHello", name.capitalize() + "!")
 
 print(
@@ -23,5 +24,7 @@ letter = input("\nWhich letter would you like to count the occurence of : ")
 
 message = message.lower()
 letter = letter.lower()
+
 letter_count = message.count(letter)
+
 print(f"\n{name}, your message has {letter_count} {letter}'s in it.")
