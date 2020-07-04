@@ -27,3 +27,19 @@ Step by Step Guide:
 ● Format your output as below.
 
 """
+import math
+
+print("Welcome to Right Triangle Solver App")
+
+side_a = float(input("\nEnter the side 'a' of the triangle : "))
+side_b = float(input("\nEnter the side 'b' of the triangle : "))
+
+# calculate hypotenuse of the triangle
+hypotenuse = math.sqrt(side_a ** 2 + side_b ** 2)
+
+# calculate area of the triangle
+area = 0.5 * side_a * side_b
+
+# format the output
+print(f"\nHypotenuse for the sides {side_a} and {side_b} is {round(hypotenuse, 3)}")
+print(f"\nArea of the Triangle for the {side_a} and {side_b} is {area}")
