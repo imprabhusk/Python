@@ -34,10 +34,7 @@ name = input("\nWhat is your name : ").title().strip()
 
 print("\nHello", name.capitalize() + "!")
 
-print(
-    "\nI will count the number of times that a specific letter occurs in a \
-    message"
-)
+print("\nI will count the number of times that a specific letter occurs in a message")
 
 message = input("\nPlease Enter a Message : ")
 
