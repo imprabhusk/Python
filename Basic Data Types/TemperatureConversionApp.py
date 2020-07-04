@@ -22,3 +22,16 @@ Step by Step Guide:
 ● Format your output as below.
 
 """
+
+print("Welcome to Temprature Conversion App")
+
+temperature_in_fahrenheit = float(
+    input("\nWhat is the given temperature in degree fahrenheit : ")
+)
+
+temperature_in_celsius = (5 / 9) * (temperature_in_fahrenheit - 32)
+temperature_in_kelvin = temperature_in_celsius + 273.15
+
+print(f"\nDegrees in Fahrenheit is {round(temperature_in_fahrenheit, 4)}")
+print(f"\nDegrees in Celsius is {round(temperature_in_celsius, 4)}")
+print(f"\nDegrees in Kelvin is {round(temperature_in_kelvin, 4)}")
