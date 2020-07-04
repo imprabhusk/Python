@@ -34,7 +34,7 @@ Step By Step Guide:
 print("Welcome to Multiplication and Exponentiation App")
 
 name = input("\nWhat is your name : ").title().strip()
-print(f"\nHello {name.title()} Math is Fun!")
+print(f"\nHello {name.title()} Math is Cool! Let's Enjoy")
 
 number = float(input("\nWhich number would you like to work with : "))
 
