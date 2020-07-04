@@ -23,3 +23,14 @@ Step by Step Guide:
 ● Format your output.
 
 """
+
+print("Welcome to Miles per Hour to Meter per Second Conversion App")
+
+# Gathering user input which accepts decimal number
+miles_per_hour = float(input("\nWhat is your speed in miles per hour : "))
+
+# miles per hour to meter per second conversion
+meter_per_second = miles_per_hour * 0.4475
+
+# Formatting the output
+print(f"\nYour speed in meter per second is {round(meter_per_second, 2)}")
