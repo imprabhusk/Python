@@ -30,4 +30,34 @@ Step by Step Guide:
 ● “Chunk” your code so that is readable.
 ● Use appropriate and informative variable names.
 ● Format your output as below.
+
 """
+print("Welcome to Types of Lists App")
+
+num_strings = ["15", "100", "55", "42"]
+num_ints = [15, 100, 55, 42]
+num_floats = [15.1, 100.2, 55.3, 42.4]
+num_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print("\nSummary Table")
+print(f"\nVariable num_strings is of type : {type(num_strings)}")
+print(f"It contains the element : {num_strings}")
+print(f"The element {num_strings[0]} is of type : {type(num_strings[0])}")
+
+print(f"\nVariable num_ints is of type : {type(num_ints)}")
+print(f"It contains the element : {num_ints}")
+print(f"The element {num_ints[0]} is of type : {type(num_ints[0])}")
+
+print(f"\nVariable num_floats is of type : {type(num_floats)}")
+print(f"It contains the element : {num_floats}")
+print(f"The element {num_floats[0]} is of type : {type(num_floats[0])}")
+
+print(f"\nVariable num_lists is of type : {type(num_lists)}")
+print(f"It contains the element : {num_lists}")
+print(f"The element {num_lists[0]} is of type : {type(num_lists[0])}")
+
+num_strings.sort()
+num_ints.sort()
+print("\nNow sorting num_strings and num_ints")
+print(f"Sorted num_strings are : {num_strings}")
+print(f"Sorted num_ints are : {num_ints}")
