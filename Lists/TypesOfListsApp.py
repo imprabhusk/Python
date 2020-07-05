@@ -58,6 +58,7 @@ print(f"The element {num_lists[0]} is of type : {type(num_lists[0])}")
 
 num_strings.sort()
 num_ints.sort()
+
 print("\nNow sorting num_strings and num_ints")
 print(f"Sorted num_strings are : {num_strings}")
 print(f"Sorted num_ints are : {num_ints}")
