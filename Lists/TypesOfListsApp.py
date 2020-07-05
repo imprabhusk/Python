@@ -34,6 +34,7 @@ Step by Step Guide:
 """
 print("Welcome to Types of Lists App")
 
+# Defining the list
 num_strings = ["15", "100", "55", "42"]
 num_ints = [15, 100, 55, 42]
 num_floats = [15.1, 100.2, 55.3, 42.4]
@@ -56,9 +57,12 @@ print(f"\nVariable num_lists is of type : {type(num_lists)}")
 print(f"It contains the element : {num_lists}")
 print(f"The element {num_lists[0]} is of type : {type(num_lists[0])}")
 
+# Sorting the Lists
 num_strings.sort()
 num_ints.sort()
 
+# Formatting the output
 print("\nNow sorting num_strings and num_ints")
 print(f"Sorted num_strings are : {num_strings}")
 print(f"Sorted num_ints are : {num_ints}")
+print("\nStrings are sorted alphabetically while integers are sorted numerically!!!")
