@@ -40,6 +40,7 @@ print("Welcome to BasktetBall Roaster App")
 
 roster = []
 
+# Get user input and define our roster
 point_guard = input("\nWho is your point guard : ")
 roster.append(point_guard)
 shooting_guard = input("Who is your shooting guard : ")
@@ -51,6 +52,7 @@ roster.append(power_forward)
 center = input("Who is your center : ")
 roster.append(center)
 
+# Display roster
 print("\nYour starting five for the upcoming basketball season")
 print(f"Point Guard\t\t : {roster[0]}")
 print(f"Shooting Guard\t\t : {roster[1]}")
@@ -60,12 +62,15 @@ print(f"Center\t\t\t : {roster[4]}")
 
 injured_player = roster.pop(2)
 
+# Remove injured player
 print(f"\nOh No!, {injured_player} is injured")
 print(f"Your Roaster only has {len(roster)} player")
 
+# Add new player
 added_player = input(f"\nWho will take {injured_player} spot : ").title()
 roster.insert(2, added_player)
 
+# Display roster
 print("\nYour starting five for the upcoming basketball season")
 print(f"Point Guard\t\t : {roster[0]}")
 print(f"Shooting Guard\t\t : {roster[1]}")
@@ -73,5 +78,6 @@ print(f"Small Forward\t\t : {roster[2]}")
 print(f"Power Forward\t\t : {roster[3]}")
 print(f"Center\t\t\t : {roster[4]}")
 
+# Format output
 print(f"\nGood Luck! {roster[2]}, You will do great!")
 print(f"Your roster now has {len(roster)} players.")
