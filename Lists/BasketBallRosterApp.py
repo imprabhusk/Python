@@ -36,7 +36,7 @@ Step by Step Guide:
 
 """
 
-print("Welcome to BasktetBall Roaster App")
+print("Welcome to BasktetBall Roster App")
 
 roster = []
 
