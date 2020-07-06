@@ -56,3 +56,63 @@ Step By Step Guide:
 ● Format your output.
 
 """
+
+print("Welcome to the Favorite Teacher App")
+
+fav_teachers = []
+
+fav_teachers.append(input("\nWho is your first favorite teacher : ").title())
+fav_teachers.append(input("Who is your second favorite teacher : ").title())
+fav_teachers.append(input("Who is your third favorite teacher : ").title())
+fav_teachers.append(input("Who is your fourth favorite teacher : ").title())
+
+print(f"\nYour favorite teachers ranked are : {fav_teachers}")
+print(f"Your favorite teachers alphabetically are : {sorted(fav_teachers)}")
+print(
+    f"Your favorite teachers in reverse alphabetical order are : \
+{sorted(fav_teachers,reverse=True)}"
+)
+
+print(f"\nYour top two teachers are : {fav_teachers[0]} and {fav_teachers[1]}.")
+print(f"Your next two teachers are : {fav_teachers[2]} and {fav_teachers[3]}.")
+print(f"Your last favorite teacher is : {fav_teachers[-1]}")
+print(f"You have total of {len(fav_teachers)} favorite teachers.")
+
+fav_teachers.insert(
+    0,
+    input(
+        f"\nOops, {fav_teachers[0]} is no longer your favorite teacher. Who is your\
+favorite teacher now : "
+    ).title(),
+)
+
+print(f"\nYour favorite teachers ranked are : {fav_teachers}")
+print(f"Your favorite teachers alphabetically are : {sorted(fav_teachers)}")
+print(
+    f"Your favorite teachers in reverse alphabetical order are : \
+{sorted(fav_teachers,reverse=True)}"
+)
+
+print(f"\nYour top two teachers are : {fav_teachers[0]} and {fav_teachers[1]}.")
+print(f"Your next two teachers are : {fav_teachers[2]} and {fav_teachers[3]}.")
+print(f"Your last favorite teacher is : {fav_teachers[-1]}")
+print(f"You have total of {len(fav_teachers)} favorite teachers.")
+
+fav_teachers.remove(
+    input(
+        "\nYou've decided you no longer like a specific teacher. Which you like to remove\
+ from the lists : "
+    ).title()
+)
+
+print(f"\nYour favorite teachers ranked are : {fav_teachers}")
+print(f"Your favorite teachers alphabetically are : {sorted(fav_teachers)}")
+print(
+    f"Your favorite teachers in reverse alphabetical order are : \
+{sorted(fav_teachers,reverse=True)}"
+)
+
+print(f"\nYour top two teachers are : {fav_teachers[0]} and {fav_teachers[1]}.")
+print(f"Your next two teachers are : {fav_teachers[2]} and {fav_teachers[3]}.")
+print(f"Your last favorite teacher is : {fav_teachers[-1]}")
+print(f"You have total of {len(fav_teachers)} favorite teachers.")
