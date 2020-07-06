@@ -10,4 +10,44 @@ store is out of a particular item and prompt the user to replace the item with
 a new item. You will use the datetime library to display the current date and
 time the shopping is taking place in mm/dd hh:mm format.
 
+Step by Step Guide:
+
+● Define a list that will hold the foods you need to get at the grocery store.
+    ○ Start by populating the list with two foods, Meat and Cheese.
+● Print a Welcome message
+● Print the current date and time.
+    ○ This functionality is outside the scope of basic Python. We will have to import the
+      datetime library to gain access to code that can perform this function.
+    ○ Type import datetime as the first line of code in your program.
+    ○ Create a datetime object using the datetime library and store the pertinent
+      information in appropriately named variables using the following code:
+        ■ time = datetime.datetime.now()
+        ■ month = str(time.month)
+        ■ day = str(time.day)
+        ■ hour = str(time.hour)
+        ■ minute = str(time.minute)
+    ○ Use these new variables to print the current date and time.
+● Print a message informing the user of the two foods in their grocery list.
+    ○ Make sure to title case any user input.
+● Print the grocery list.
+● Permanently sort the grocery list.
+● Print the sorted grocery list.
+● Simulate shopping by doing the following:
+    ○ Print the current list length.
+    ○ Print the current list.
+    ○ Get user input for the food purchased.
+        ■ The input should be case insensitive. The program should recognize Meat, meat,
+          and MEAT all the same.
+    ○ Remove the appropriate food from the list.
+    ○ Do this three times.
+● When there is only 2 foods left in the list, print the list and inform the user that the
+  store is out of the last item in the list, making sure to remove this item from the list
+● Ask user what food they would like instead and insert this food at the beginning of the
+  list.
+● Print a final version of the grocery list.
+● Use at least 2 comments to describe sections of your code.
+● “Chunk” your code so that is readable.
+● Use appropriate and informative variable names.
+● Format your output
+
 """
