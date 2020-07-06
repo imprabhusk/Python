@@ -35,3 +35,43 @@ Step by Step Guide:
 ● Format your output.
 
 """
+
+print("Welcome to BasktetBall Roaster App")
+
+roster = []
+
+point_guard = input("\nWho is your point guard : ")
+roster.append(point_guard)
+shooting_guard = input("Who is your shooting guard : ")
+roster.append(shooting_guard)
+small_forward = input("Who is your small forward : ")
+roster.append(small_forward)
+power_forward = input("Who is your power forward : ")
+roster.append(power_forward)
+center = input("Who is your center : ")
+roster.append(center)
+
+print("\nYour starting five for the upcoming basketball season")
+print(f"Point Guard\t\t : {roster[0]}")
+print(f"Shooting Guard\t\t : {roster[1]}")
+print(f"Small Forward\t\t : {roster[2]}")
+print(f"Power Forward\t\t : {roster[3]}")
+print(f"Center\t\t\t : {roster[4]}")
+
+injured_player = roster.pop(2)
+
+print(f"\nOh No!, {injured_player} is injured")
+print(f"Your Roaster only has {len(roster)} player")
+
+added_player = input(f"\nWho will take {injured_player} spot : ").title()
+roster.insert(2, added_player)
+
+print("\nYour starting five for the upcoming basketball season")
+print(f"Point Guard\t\t : {roster[0]}")
+print(f"Shooting Guard\t\t : {roster[1]}")
+print(f"Small Forward\t\t : {roster[2]}")
+print(f"Power Forward\t\t : {roster[3]}")
+print(f"Center\t\t\t : {roster[4]}")
+
+print(f"\nGood Luck! {roster[2]}, You will do great!")
+print(f"Your roster now has {len(roster)} players.")
