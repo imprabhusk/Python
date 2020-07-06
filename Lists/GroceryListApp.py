@@ -51,3 +51,65 @@ Step by Step Guide:
 ● Format your output
 
 """
+
+import datetime
+
+time = datetime.datetime.now()
+year = time.year
+month = time.month
+day = time.day
+hour = time.hour
+minute = time.minute
+
+foods = ["Meat", "Cheese"]
+
+print("Welcome to the Grocery List App")
+
+print(f"\nCurrent Date : {day}/{month}/{year} - {hour} hour {minute} minute")
+print(f"\nYou currently have {foods[0]} and {foods[1]} in your Grocery List")
+
+# Get user input
+food = input("\nType the food to add to the grocery list: ")
+foods.append(food.title())
+food = input("Type the food to add to the grocery list: ")
+foods.append(food.title())
+food = input("Type the food to add to the grocery list: ")
+foods.append(food.title())
+
+# print and sort the items in the lists
+print(f"Items in your Grocery Lists are {foods}")
+foods.sort()
+print(f"Here is your sorted Grocery List Items {foods}")
+
+# Simulate Shopping
+print("\nSimulating grocery shopping...")
+print(f"\nCurrent grocery list: {len(foods)} items")
+print(foods)
+buy_food = input("What food did you just buy: ").title()
+foods.remove(buy_food)
+print(f"Removing {buy_food} from the list...")
+
+print("\nSimulating grocery shopping...")
+print(f"\nCurrent grocery list: {len(foods)} items")
+print(foods)
+buy_food = input("What food did you just buy: ").title()
+foods.remove(buy_food)
+print(f"Removing {buy_food} from the list...")
+
+print("\nSimulating grocery shopping...")
+print(f"\nCurrent grocery list: {len(foods)} items")
+print(foods)
+buy_food = input("What food did you just buy: ").title()
+foods.remove(buy_food)
+print(f"Removing {buy_food} from the list...")
+
+# The store is out of an item...
+print(f"\nCurrent grocery list: {len(foods)} items")
+print(foods)
+no_item = foods.pop()
+print(f"\nSorry, the store is out of {no_item}.")
+new_food = input("What food would you like instead: ").title()
+foods.insert(0, new_food)
+
+print("\nHere is what remains on your grocery list: ")
+print(foods)
