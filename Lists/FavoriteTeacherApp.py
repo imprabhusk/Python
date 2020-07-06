@@ -61,11 +61,13 @@ print("Welcome to the Favorite Teacher App")
 
 fav_teachers = []
 
+# Get user input
 fav_teachers.append(input("\nWho is your first favorite teacher : ").title())
 fav_teachers.append(input("Who is your second favorite teacher : ").title())
 fav_teachers.append(input("Who is your third favorite teacher : ").title())
 fav_teachers.append(input("Who is your fourth favorite teacher : ").title())
 
+# Summary of list
 print(f"\nYour favorite teachers ranked are : {fav_teachers}")
 print(f"Your favorite teachers alphabetically are : {sorted(fav_teachers)}")
 print(
@@ -78,6 +80,7 @@ print(f"Your next two teachers are : {fav_teachers[2]} and {fav_teachers[3]}.")
 print(f"Your last favorite teacher is : {fav_teachers[-1]}")
 print(f"You have total of {len(fav_teachers)} favorite teachers.")
 
+# Insert a new favorite teacher
 fav_teachers.insert(
     0,
     input(
@@ -86,6 +89,7 @@ favorite teacher now : "
     ).title(),
 )
 
+# Summary of list
 print(f"\nYour favorite teachers ranked are : {fav_teachers}")
 print(f"Your favorite teachers alphabetically are : {sorted(fav_teachers)}")
 print(
@@ -98,6 +102,7 @@ print(f"Your next two teachers are : {fav_teachers[2]} and {fav_teachers[3]}.")
 print(f"Your last favorite teacher is : {fav_teachers[-1]}")
 print(f"You have total of {len(fav_teachers)} favorite teachers.")
 
+# Remove a specific teacher
 fav_teachers.remove(
     input(
         "\nYou've decided you no longer like a specific teacher. Which you like to remove\
@@ -105,6 +110,7 @@ fav_teachers.remove(
     ).title()
 )
 
+# Summary of list
 print(f"\nYour favorite teachers ranked are : {fav_teachers}")
 print(f"Your favorite teachers alphabetically are : {sorted(fav_teachers)}")
 print(
