@@ -36,3 +36,58 @@ Step By Step Guide:
 ● Calculate the new average grade for the student as a float.
 
 """
+
+print("Welcome to Grade Point Average App")
+
+name = input("\nWhat is your name : ").title().strip()
+number_of_grades = int(input('\nHow many grades would you like to enter : '))
+grades = []
+
+for grade in range(1, number_of_grades + 1):
+    grades.append(int(input(f"Enter your grade {grade}: ")))
+
+grades.sort(reverse=True)
+print(f"\nGrades from highest to lowest : {grades}")
+
+average = sum(grades) / len(grades)
+print(f"\n{name}'s Grade Summary : ")
+print(f"\nTotal Number of Grades : {number_of_grades}")
+print(f"Highest Grade : {max(grades)}")
+print(f"Lowest Grade : {min(grades)}")
+print(f"Average : {round(average, 2)}")
+
+desired_average = float(input('\nWhat is your desired average : '))
+required_grade = desired_average * (len(grades) + 1) - sum(grades)
+
+print(f"\nGood Luck, {name}!")
+print(f"You will need to get a {round(required_grade, 2)} on your next assignment to earn a {desired_average} average.")
+
+new_grades = grades[:]
+
+print("\nLet's see what you average could have been if you did better/worse on an assignment.")
+grade_change = int(input("What grade would you like to change : "))
+new_grades.remove(grade_change)
+new_grade = int(input(f"What grade would you like to change {grade_change} to : "))
+new_grades.append(new_grade)
+
+new_grades.sort(reverse=True)
+print("\nNew Grades from highest to lowest : ")
+for grade in new_grades:
+    print(grade)
+
+new_average = sum(new_grades) / len(new_grades)
+print(f"\n{name}'s New Grade Summary : ")
+print(f"\nTotal Number of Grades\t\t : {new_grades}")
+print(f"Highest Grade\t\t : {max(new_grades)}")
+print(f"Lowest Grade\t\t : {min(new_grades)}")
+print(f"New Average\t\t : {round(new_average, 2)}")
+
+print(f"\nYour new average could be a {new_average} compared to your real average of {average}")
+
+average_change = new_average - average
+
+print(f"That is a change of {average_change} points!")
+
+print("\nToo Bad your original grades are still the same!")
+print(grades)
+print("You should go ask for extra credit!!!")
