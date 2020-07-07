@@ -39,29 +39,38 @@ Step By Step Guide:
 
 print("Welcome to Grade Point Average App")
 
+# Get user input
 name = input("\nWhat is your name : ").title().strip()
 number_of_grades = int(input('\nHow many grades would you like to enter : '))
-grades = []
 
+# Get the user's grades
+grades = []
 for grade in range(1, number_of_grades + 1):
     grades.append(int(input(f"Enter your grade {grade}: ")))
 
+# Sort the grades and print them to the screen
 grades.sort(reverse=True)
 print(f"\nGrades from highest to lowest : {grades}")
 
+# calculate the average
 average = sum(grades) / len(grades)
-print(f"\n{name}'s Grade Summary : ")
-print(f"\nTotal Number of Grades : {number_of_grades}")
-print(f"Highest Grade : {max(grades)}")
-print(f"Lowest Grade : {min(grades)}")
-print(f"Average : {round(average, 2)}")
 
+# print user's grade summary
+print(f"\n{name}'s Grade Summary : ")
+print(f"\nTotal Number of Grades\t : {number_of_grades}")
+print(f"Highest Grade\t\t : {max(grades)}")
+print(f"Lowest Grade\t\t : {min(grades)}")
+print(f"Average\t\t : {round(average, 2)}")
+
+# Ask the user for their desired average to improve their grade in next assignments.
 desired_average = float(input('\nWhat is your desired average : '))
 required_grade = desired_average * (len(grades) + 1) - sum(grades)
 
+# print summary
 print(f"\nGood Luck, {name}!")
 print(f"You will need to get a {round(required_grade, 2)} on your next assignment to earn a {desired_average} average.")
 
+# make a copy of the original grades and swap out one of them.
 new_grades = grades[:]
 
 print("\nLet's see what you average could have been if you did better/worse on an assignment.")
@@ -70,24 +79,25 @@ new_grades.remove(grade_change)
 new_grade = int(input(f"What grade would you like to change {grade_change} to : "))
 new_grades.append(new_grade)
 
+# sort the new grades
 new_grades.sort(reverse=True)
 print("\nNew Grades from highest to lowest : ")
 for grade in new_grades:
     print(grade)
 
+# calculate the new average
 new_average = sum(new_grades) / len(new_grades)
 print(f"\n{name}'s New Grade Summary : ")
-print(f"\nTotal Number of Grades\t\t : {new_grades}")
+print(f"\nTotal Number of Grades\t : {len(new_grades)}")
 print(f"Highest Grade\t\t : {max(new_grades)}")
 print(f"Lowest Grade\t\t : {min(new_grades)}")
 print(f"New Average\t\t : {round(new_average, 2)}")
-
 print(f"\nYour new average could be a {new_average} compared to your real average of {average}")
 
 average_change = new_average - average
 
-print(f"That is a change of {average_change} points!")
-
+# print summary and format the output
+print(f"That is a change of {round(average_change, 2)} points!")
 print("\nToo Bad your original grades are still the same!")
 print(grades)
 print("You should go ask for extra credit!!!")
