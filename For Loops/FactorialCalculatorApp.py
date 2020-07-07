@@ -38,23 +38,27 @@ import math
 
 print("Welcome to Factorial Calculator App")
 
+# Get user input
 number = int(input("\nWhat number would you like to compute the factorial of : "))
 
+# Display mathematical relationship of a factorial
 print(f"{number}! = ",end="")
 for i in range(1, number):
     print(f"{i}", end=" * ")
 print(number)
 
+# Using math library calculate factorial
 print("\nHere is the result from math library")
 print(f"The factorial of {number} is : {math.factorial(number)}")
 
+# Using my own algorithm
 print("\nHere is the result of my own algorithm")
 
 fact = 1
 for num in range(1,number + 1):
     fact *= num
 
-
+# Format the output
 print(f"The factorial of {number} is : {fact}")
 print(f'\nIt is shown that {number}! is = {fact}(with excitement)')
 print('Yay, my algorithm works perfectly')
