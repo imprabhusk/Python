@@ -20,7 +20,7 @@ Step By Step Guide:
     ○ Next, use a for loop to print through the sequence of numbers needed for your
       factorial and use an appropriate value for the end argument.
     ○ Lastly, outside of the for loop print your last number with the default end
-      argument of to put your prompt on a new line.
+      argument of \n to put your prompt on a new line.
 ● Use the math library to compute the factorial of your given number and print the result.
     ○ Type import math as the first line of code in your program.
     ○ The math library has a built in function to compute a factorial you can use.
@@ -34,3 +34,27 @@ Step By Step Guide:
 ● Format your output.
 
 """
+import math
+
+print("Welcome to Factorial Calculator App")
+
+number = int(input("\nWhat number would you like to compute the factorial of : "))
+
+print(f"{number}! = ",end="")
+for i in range(1, number):
+    print(f"{i}", end=" * ")
+print(number)
+
+print("\nHere is the result from math library")
+print(f"The factorial of {number} is : {math.factorial(number)}")
+
+print("\nHere is the result of my own algorithm")
+
+fact = 1
+for num in range(1,number + 1):
+    fact *= num
+
+
+print(f"The factorial of {number} is : {fact}")
+print(f'\nIt is shown that {number}! is = {fact}(with excitement)')
+print('Yay, my algorithm works perfectly')
