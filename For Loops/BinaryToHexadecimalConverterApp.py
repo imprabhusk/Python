@@ -42,6 +42,7 @@ element in each list.
 
 print('Welcome to Binary to Hexadecimal Conversion App')
 
+# Get user input and generate list.
 max_value = int(input('\nCompute binary and hexadecimal values up to the following decimal number : '))
 
 decimal = list(range(1, max_value + 1))
@@ -55,10 +56,12 @@ for num in decimal:
 
 print("\nGenerating Lists... Complete!")
 
+# Get slicing index from user.
 print("\nUsing slices you will now show a portion of each list")
 lower_range = int(input('\nWhat decimal number would you like to start at : '))
 upper_range = int(input('What decimal number would you like to stop at : '))
 
+# Slice through each list individually.
 print(f"\nDecimal values from {lower_range} and {upper_range} : ")
 for num in binary[lower_range - 1 : upper_range]:
     print(num)
@@ -67,6 +70,7 @@ print(f"\nHexadecimal values from {lower_range} and {upper_range} : ")
 for num in hexadecimal[lower_range - 1 : upper_range]:
     print(num)
 
+# Format the output
 input(f"\nPress Enter to see all values from 1 to {max_value}.")
 print("\nDecimal\t\tBinary\t\tHexadecimal")
 print('-------------------------------------------')
