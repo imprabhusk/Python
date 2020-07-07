@@ -50,7 +50,7 @@ eq_number = int(input('\nHow many equations would you like to solve today : '))
 
 for num in range(1, eq_number + 1):
     print(f"\nSolving equation : #{num}")
-    print("------------------------------------------------")
+    print("--------------------------------------------------------------")
     a = float(input('Enter your value of a (coefficient of x^2) : '))
     b = float(input('Enter your value of b (coefficient of x) : '))
     c = float(input('Enter your value of c (constant) : '))
@@ -61,5 +61,6 @@ for num in range(1, eq_number + 1):
     print(f"\nThe solutions to {a}x^2 + {b}x + {c} = {0} are : ")
     print(f"The value of x1 is : {x1}")
     print(f"The value of x2 is : {x2}")
+    print("--------------------------------------------------------------")
 
 print("\nThank you for using Quadratic Equation Solver App. Goodbye.")
