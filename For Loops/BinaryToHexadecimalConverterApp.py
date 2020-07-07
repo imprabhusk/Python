@@ -9,6 +9,7 @@ lists of decimal, binary, and hexadecimal values to show the relationship
 between numbers of different bases.
 
 Step By Step Guide:
+
 ● Print a welcome message.
 ● Get user input for how many values they would like to convert to binary and
 hexadecimal.
