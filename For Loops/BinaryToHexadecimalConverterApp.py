@@ -23,7 +23,8 @@ hexadecimal.
         ■ To accomplish this use the built in bin() and hex() functions.
         ■ Google or check the python documentation on how to use these functions.
 ● Print a message informing the user that the lists are complete.
-● Rather than print the whole list initially, use slicing to only show a portion of each list.
+● Rather than print the whole list initially, use slicing to only show a portion of
+  each list.
     ○ Get user input for the decimal number to start and stop at.
     ○ Be careful and think as to how these numbers relate to the indices of a list slice
 ● Print a message for each list slice.
@@ -41,10 +42,14 @@ element in each list.
 
 """
 
-print('Welcome to Binary to Hexadecimal Conversion App')
+print("Welcome to Binary to Hexadecimal Conversion App")
 
 # Get user input and generate list.
-max_value = int(input('\nCompute binary and hexadecimal values up to the following decimal number : '))
+max_value = int(
+    input(
+        "\nCompute binary and hexadecimal values up to the following decimal number : "
+    )
+)
 
 decimal = list(range(1, max_value + 1))
 
@@ -59,21 +64,21 @@ print("\nGenerating Lists... Complete!")
 
 # Get slicing index from user.
 print("\nUsing slices you will now show a portion of each list")
-lower_range = int(input('\nWhat decimal number would you like to start at : '))
-upper_range = int(input('What decimal number would you like to stop at : '))
+lower_range = int(input("\nWhat decimal number would you like to start at : "))
+upper_range = int(input("What decimal number would you like to stop at : "))
 
 # Slice through each list individually.
-print(f"\nDecimal values from {lower_range} and {upper_range} : ")
+print(f"\nDecimal values from {lower_range} to {upper_range} : ")
 for num in binary[lower_range - 1 : upper_range]:
     print(num)
 
-print(f"\nHexadecimal values from {lower_range} and {upper_range} : ")
+print(f"\nHexadecimal values from {lower_range} to {upper_range} : ")
 for num in hexadecimal[lower_range - 1 : upper_range]:
     print(num)
 
 # Format the output
 input(f"\nPress Enter to see all values from 1 to {max_value}.")
 print("\nDecimal\t\tBinary\t\tHexadecimal")
-print('-------------------------------------------')
+print("-------------------------------------------")
 for d, b, h in zip(decimal, binary, hexadecimal):
     print(f"{d}\t\t{b}\t\t{h}")
