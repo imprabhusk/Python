@@ -24,10 +24,12 @@ Step By Step Guide:
 ● Use the math library to compute the factorial of your given number and print the result.
     ○ Type import math as the first line of code in your program.
     ○ The math library has a built in function to compute a factorial you can use.
-● Write your own algorithm to compute the factorial of your given number and print the results.
+● Write your own algorithm to compute the factorial of your given number and print the
+  results.
     ○ Recall that a factorial is just repeated multiplication.
     ○ To perform this repeated multiplication, use a for loop with a numerical range.
-● Print a summary of the results to show that math library and your algorithm were in agreement.
+● Print a summary of the results to show that math library and your algorithm were in
+  agreement.
 ● Use at least 2 comments to describe sections of your code.
 ● “Chunk” your code so that is readable.
 ● Use appropriate and informative variable names.
@@ -42,7 +44,7 @@ print("Welcome to Factorial Calculator App")
 number = int(input("\nWhat number would you like to compute the factorial of : "))
 
 # Display mathematical relationship of a factorial
-print(f"{number}! = ",end="")
+print(f"{number}! = ", end="")
 for i in range(1, number):
     print(f"{i}", end=" * ")
 print(number)
@@ -55,10 +57,10 @@ print(f"The factorial of {number} is : {math.factorial(number)}")
 print("\nHere is the result of my own algorithm")
 
 fact = 1
-for num in range(1,number + 1):
+for num in range(1, number + 1):
     fact *= num
 
 # Format the output
 print(f"The factorial of {number} is : {fact}")
-print(f'\nIt is shown that {number}! is = {fact}(with excitement)')
-print('Yay, my algorithm works perfectly')
+print(f"\nIt is shown that {number}! is = {fact}(with excitement)")
+print("Yay, my algorithm works perfectly")
