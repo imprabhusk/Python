@@ -76,5 +76,5 @@ if username in users:
 else:
     print(
         "\nSorry, You do not have an account with us. kindly create an account to shop\
-            with us. See you later. Goodbye."
+with us. See you later. Goodbye."
     )
