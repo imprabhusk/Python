@@ -38,20 +38,20 @@ Step by Step Guide:
 
 """
 
-print('Welcome to the Shipping Accounts App')
+print("Welcome to the Shipping Accounts App")
 
-users = ['jack', 'mike', 'smith', 'alan', 'jenny']
-username = input('\nHello, What is your name : ').title().lower()
+users = ["jack", "mike", "smith", "alan", "jenny"]
+username = input("\nHello, What is your name : ").title().lower()
 
 if username in users:
     print(f"\nHello {username}. Welcome back to your account.")
-    print('\nCurrent Shipping prices are as follows:')
+    print("\nCurrent Shipping prices are as follows:")
     print("Shipping orders 0 to 100\t\t : $5.10 each")
     print("Shipping orders 100 to 500\t\t : $5.00 each")
     print("Shipping orders 500 to 1000\t\t : $4.95 each")
     print("Shipping orders over 1000\t\t : $5.10 each")
 
-    quantity = int(input('\nHow many items would you like to ship : '))
+    quantity = int(input("\nHow many items would you like to ship : "))
     if quantity < 100:
         cost = 5.10
     elif quantity < 500:
@@ -64,15 +64,17 @@ if username in users:
     bill = quantity * cost
     bill = round(bill, 2)
 
-    print(f'To ship {quantity} items it will cost you {bill}$ at {cost} per item.')
+    print(f"To ship {quantity} items it will cost you {bill}$ at {cost} per item.")
 
     choice = input("\nWould you like to place this order : ").lower()
 
-    if choice.startswith('y'):
-        print(f'Okay, Your Order has been placed. Shipping your {quantity} items.')
+    if choice.startswith("y"):
+        print(f"Okay, Your Order has been placed. Shipping your {quantity} items.")
     else:
-        print('Okay, no order is being placed at this time.')
+        print("Okay, no order is being placed at this time.")
 
 else:
-    print('\nSorry, You do not have an account with us. kindly create an account\
-        to shop with us. See you later. Goodbye.')
+    print(
+        "\nSorry, You do not have an account with us. kindly create an account to shop\
+            with us. See you later. Goodbye."
+    )
