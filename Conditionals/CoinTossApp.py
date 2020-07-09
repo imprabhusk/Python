@@ -45,3 +45,42 @@ Step by Step Guide:
 ● Format your output.
 
 """
+
+import random
+
+print("Welcome to Coin Toss App")
+print("\nI will flip a coin a set number of times")
+
+flip_number = int(input("\nHow many times would you like to flip the coin : "))
+choice = input("Would you like to see the result of each filp : ").lower()
+
+print("\nFlipping")
+
+heads = 0
+tails = 0
+
+for flips in range(flip_number):
+    coin = random.randint(0, 1)
+
+    if coin == 1:
+        heads += 1
+        if choice.startswith("y"):
+            print("HEADS")
+    else:
+        tails += 1
+        if choice.startswith("y"):
+            print("TAILS")
+
+    if heads == tails:
+        print(
+            f"At {flips + 1} flips, the number of heads and tails were equal at {heads}\
+each."
+        )
+
+heads_percentage = round(100 * heads / flip_number, 2)
+tails_percentage = round(100 * tails / flip_number, 2)
+
+print(f"\nResults of Flipping a Coin {flip_number} Times:")
+print("\nSide\t\tCount\t\tPercentage")
+print(f"Heads\t\t{heads} / {flip_number}\t\t {heads_percentage}%")
+print(f"Tails\t\t{tails} / {flip_number}\t\t {tails_percentage}%")
