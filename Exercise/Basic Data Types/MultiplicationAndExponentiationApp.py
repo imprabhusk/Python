@@ -38,6 +38,7 @@ print(f"\nHello {name.title()}, Math is Cool! Let's Enjoy")
 
 number = float(input("\nWhich number would you like to work with : "))
 
+# Multiplication Table for the given number
 print(f"\nMultiplication Table for {number}")
 
 print(f"\n{1.0} * {number} = {round(1.0 * number, 4)}")
@@ -51,6 +52,7 @@ print(f"{8.0} * {number} = {round(8.0 * number, 4)}")
 print(f"{9.0} * {number} = {round(9.0 * number, 4)}")
 print(f"{10.0} * {number} = {round(10.0 * number, 4)}")
 
+# Exponentiation Table for the given number
 print(f"\nExponentiation Table for {number}")
 
 print(f"\n{number} ** {1} = {round(number ** 1, 4)}")
