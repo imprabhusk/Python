@@ -40,4 +40,83 @@ Step by Step Guide:
 ● “Chunk” your code so that is readable.
 ● Use appropriate and informative variable names.
 ● Format your output.
+
 """
+
+import random
+
+print("Welcome to Rock, Paper and Scissor App")
+
+name = input("\nWhat is your name : ").title().strip()
+rounds = int(input(f"\n{name}, How many rounds would you like to play : "))
+moves = ["rock", "paper", "scissor"]
+
+player_score = 0
+computer_score = 0
+
+for game_rounds in range(rounds):
+    print(f"\nRound {game_rounds} details:")
+    print(f"Player Score\t\t : {player_score}")
+    print(f"Computer Score\t\t : {computer_score}")
+
+    computer_index = random.randint(0, 2)
+    computer_choice = moves[computer_index]
+    player_choice = input(f"\nNow its your turn {name}: ").lower().strip()
+
+    if player_choice in moves:
+        print(f"\nComputer Choice : {computer_choice}")
+        print(f"Player Choice : {player_choice}")
+
+        if player_choice == "rock" and computer_choice == "rock":
+            winner = "Tie"
+        elif player_choice == "paper" and computer_choice == "rock":
+            winner = "Player"
+        elif player_choice == "scissor" and computer_choice == "rock":
+            winner = "Computer"
+
+        elif player_choice == "rock" and computer_choice == "paper":
+            winner = "Computer"
+        elif player_choice == "paper" and computer_choice == "paper":
+            winner = "Tie"
+        elif player_choice == "scissor" and computer_choice == "paper":
+            winner = "Player"
+
+        elif player_choice == "rock" and computer_choice == "scissor":
+            winner = "Player"
+        elif player_choice == "paper" and computer_choice == "scissor":
+            winner = "Computer"
+        elif player_choice == "scissor" and computer_choice == "scissor":
+            winner = "Tie"
+
+        else:
+            print("\nRound winner not calculated")
+            winner = "Tie"
+
+        if winner == "Player":
+            print(f"\nYou won this round {game_rounds}.")
+            player_score += 1
+        elif winner == "Computer":
+            print(f"\nComputer won this round {game_rounds}.")
+            computer_score += 1
+        else:
+            print("\nThis round was a tie")
+
+    else:
+        print("That is not a valid game option!")
+        print("Computer gets the point")
+        computer_score += 1
+
+print("\nFinal Game Results:")
+print("------------------------------")
+print(f"Rounds played\t\t : {game_rounds}")
+print(f"Player Score\t\t : {player_score}")
+print(f"Computer Score\t\t : {computer_score}")
+print("------------------------------")
+
+if player_score > computer_score:
+    print(f"\nCongratulations {name}, You won the match against Computer")
+    print("You prooved that human brain is better than computer brain")
+elif computer_score > player_score:
+    print(f"\nComputer won this game against {name}")
+else:
+    print("\nThe game was a tie")
