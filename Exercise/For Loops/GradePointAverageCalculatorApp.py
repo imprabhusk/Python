@@ -9,7 +9,6 @@ program will make a copy of the users grades and allow them to alter one of
 their previous grades to see how doing worse or better on an assignment would
 have changed their overall average.
 
-
 Step By Step Guide:
 
 ● Print a welcome message.
@@ -43,7 +42,6 @@ Step By Step Guide:
 
 print("Welcome to Grade Point Average App")
 
-# Get user input
 name = input("\nWhat is your name : ").title().strip()
 number_of_grades = int(input("\nHow many grades would you like to enter : "))
 
