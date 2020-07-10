@@ -56,6 +56,7 @@ if username in users:
 
     # Determine the price based on how many items are shipped
     quantity = int(input("\nHow many items would you like to ship : "))
+
     if quantity < 100:
         cost = 5.10
     elif quantity < 500:
