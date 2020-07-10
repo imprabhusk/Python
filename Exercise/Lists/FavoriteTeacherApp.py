@@ -61,7 +61,6 @@ print("Welcome to the Favorite Teacher App")
 
 fav_teachers = []
 
-# Get user input
 fav_teachers.append(input("\nWho is your first favorite teacher : ").title())
 fav_teachers.append(input("Who is your second favorite teacher : ").title())
 fav_teachers.append(input("Who is your third favorite teacher : ").title())
