@@ -29,7 +29,7 @@ Step by Step Guide:
 ● Use at least 2 comments to describe sections of your code.
 ● “Chunk” your code so that is readable.
 ● Use appropriate and informative variable names.
-● Format your output as below.
+● Format your output.
 
 """
 print("Welcome to Types of Lists App")
@@ -61,7 +61,7 @@ print(f"The element {num_lists[0]} is of type : {type(num_lists[0])}")
 num_strings.sort()
 num_ints.sort()
 
-# Formatting the output
+# Format the output
 print("\nNow sorting num_strings and num_ints")
 print(f"Sorted num_strings are : {num_strings}")
 print(f"Sorted num_ints are : {num_ints}")
