@@ -36,11 +36,11 @@ Step By Step Guide:
 ● Format your output.
 
 """
+
 import math
 
 print("Welcome to Factorial Calculator App")
 
-# Get user input
 number = int(input("\nWhat number would you like to compute the factorial of : "))
 
 # Display mathematical relationship of a factorial
