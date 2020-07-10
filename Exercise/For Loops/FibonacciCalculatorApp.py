@@ -40,7 +40,6 @@ compute.
 
 print("Welcome to Fibonacci Calculator App")
 
-# Get user input
 number = int(
     input("\nHow many digits of the fibonacci sequence would you like to compute : ")
 )
