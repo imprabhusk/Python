@@ -32,5 +32,5 @@ miles_per_hour = float(input("\nWhat is your speed in miles per hour : "))
 # miles per hour to meter per second conversion
 meter_per_second = miles_per_hour * 0.4475
 
-# Formatting the output
+# Format the output
 print(f"\nYour speed in meter per second is {round(meter_per_second, 2)}")
