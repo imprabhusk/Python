@@ -34,16 +34,19 @@ Step by Step Guide:
 ● Use at least 2 comments to describe sections of your code.
 ● “Chunk” your code so that is readable.
 ● Use appropriate and informative variable names.
-● Format your output as below.
+● Format your output.
 
 """
 
 print("Welcome to the Shipping Accounts App")
 
+# list of users
 users = ["jack", "mike", "smith", "alan", "jenny"]
 username = input("\nHello, What is your name : ").title().lower()
 
+# Users in the lists only are allowed to shop
 if username in users:
+    # Print a price summary
     print(f"\nHello {username}. Welcome back to your account.")
     print("\nCurrent Shipping prices are as follows:")
     print("Shipping orders 0 to 100\t\t : $5.10 each")
@@ -51,6 +54,7 @@ if username in users:
     print("Shipping orders 500 to 1000\t\t : $4.95 each")
     print("Shipping orders over 1000\t\t : $5.10 each")
 
+    # Determine the price based on how many items are shipped
     quantity = int(input("\nHow many items would you like to ship : "))
     if quantity < 100:
         cost = 5.10
@@ -61,6 +65,7 @@ if username in users:
     else:
         cost = 4.80
 
+    # Display final cost
     bill = quantity * cost
     bill = round(bill, 2)
 
@@ -68,11 +73,14 @@ if username in users:
 
     choice = input("\nWould you like to place this order : ").lower()
 
+    # place order if you desire
     if choice.startswith("y"):
         print(f"Okay, Your Order has been placed. Shipping your {quantity} items.")
     else:
         print("Okay, no order is being placed at this time.")
 
+# If users not in users list are not allowed to shop. Add your name to users list to shop
+# with us.
 else:
     print(
         "\nSorry, You do not have an account with us. kindly create an account to shop\
