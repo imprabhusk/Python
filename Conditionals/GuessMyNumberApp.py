@@ -6,4 +6,24 @@ then guess the number. With each guess, your program will respond that the
 user’s guess is either too high or too low. When the user guesses correct, or
 after 5 guesses, your program will end the game and summarize the results.
 
+Step by Step Guide:
+
+● Print a welcome message.
+● Get user input for their name.
+● Inform the user that you are thinking of a number between 1 and 20.
+● Use the random library to generate a random integer between 1 and 20.
+    ○ Type import random as the first line of code in your program.
+● Allow the user to guess 5 times. Each time do the following:
+    ○ Get the users guess.
+    ○ If the guess is too low inform them.
+    ○ Elif the guess is too high inform them.
+    ○ Else the guess is the number use the​ ​break command to exit the for loop.
+        ■ Google or reference the python documentation on how the break command works.
+● If the user got the number correct, inform them and tell them how many guesses it took.
+● If the user did not get the number correct after the 5th guess, let them know they lost.
+● Use at least 2 comments to describe sections of your code.
+● “Chunk” your code so that is readable.
+● Use appropriate and informative variable names.
+● Format your output.
+
 """
