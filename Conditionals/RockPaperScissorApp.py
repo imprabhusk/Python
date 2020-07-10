@@ -49,24 +49,32 @@ print("Welcome to Rock, Paper and Scissor App")
 
 name = input("\nWhat is your name : ").title().strip()
 rounds = int(input(f"\n{name}, How many rounds would you like to play : "))
+
+# Initialize the moves
 moves = ["rock", "paper", "scissor"]
 
+# Initialize the score for both player and computer
 player_score = 0
 computer_score = 0
 
+# The main game loop
 for game_rounds in range(rounds):
+    # Each round details about player and computer
     print(f"\nRound {game_rounds} details:")
     print(f"Player Score\t\t : {player_score}")
     print(f"Computer Score\t\t : {computer_score}")
 
+    # Let computer choose random integer from 0 to 2 using random module
     computer_index = random.randint(0, 2)
     computer_choice = moves[computer_index]
     player_choice = input(f"\nNow its your turn {name}: ").lower().strip()
 
+    # If the player makes a valid move
     if player_choice in moves:
         print(f"\nComputer Choice : {computer_choice}")
         print(f"Player Choice : {player_choice}")
 
+        # Computer chooses rock
         if player_choice == "rock" and computer_choice == "rock":
             winner = "Tie"
         elif player_choice == "paper" and computer_choice == "rock":
@@ -74,6 +82,7 @@ for game_rounds in range(rounds):
         elif player_choice == "scissor" and computer_choice == "rock":
             winner = "Computer"
 
+        # Computer chooses paper
         elif player_choice == "rock" and computer_choice == "paper":
             winner = "Computer"
         elif player_choice == "paper" and computer_choice == "paper":
@@ -81,6 +90,7 @@ for game_rounds in range(rounds):
         elif player_choice == "scissor" and computer_choice == "paper":
             winner = "Player"
 
+        # Computer chooses scissors
         elif player_choice == "rock" and computer_choice == "scissor":
             winner = "Player"
         elif player_choice == "paper" and computer_choice == "scissor":
@@ -88,10 +98,12 @@ for game_rounds in range(rounds):
         elif player_choice == "scissor" and computer_choice == "scissor":
             winner = "Tie"
 
+        # Catch for any other conditions
         else:
             print("\nRound winner not calculated")
             winner = "Tie"
 
+        # Display round results
         if winner == "Player":
             print(f"\nYou won this round {game_rounds}.")
             player_score += 1
@@ -101,11 +113,13 @@ for game_rounds in range(rounds):
         else:
             print("\nThis round was a tie")
 
+    # If the player makes invalid moves computer score's 1 point
     else:
         print("That is not a valid game option!")
         print("Computer gets the point")
         computer_score += 1
 
+# Game Ended and Format the results
 print("\nFinal Game Results:")
 print("------------------------------")
 print(f"Rounds played\t\t : {game_rounds}")
