@@ -35,7 +35,6 @@ Step by Step Guide:
 
 print("Welcome to Voter Registration App")
 
-# Get user input
 name = input("\nWhat is your name : ").title().strip()
 age = int(input("What is your age : "))
 
