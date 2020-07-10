@@ -32,11 +32,14 @@ import random
 
 print("Welcome to Guess My Number App")
 
+# Get user name
 name = input("\nWhat is your name : ").title().strip()
 print(f"\nHello {name}, I am thinking of a number between 1 and 20.")
 
+# Pick a random integer from 1 to 20 using random module
 number = random.randint(1, 20)
 
+# Guess the number within 5 times
 for guess_number in range(5):
     guess = int(input("\nTake your guess : "))
 
@@ -47,6 +50,7 @@ for guess_number in range(5):
     else:
         break
 
+# Format the output for winning and loosing.
 if guess == number:
     print(f"\nGood Job, {name}! You guessed my number in {guess_number + 1} guesses.")
 else:
