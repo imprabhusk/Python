@@ -35,19 +35,26 @@ Step by Step Guide:
 
 print("Welcome to Voter Registration App")
 
+# Get user input
 name = input("\nWhat is your name : ").title().strip()
 age = int(input("What is your age : "))
+
+# List all the political parties
 parties = ["Republican", "Democratic", "Independent", "Libertian", "Green"]
 
+# Check the eligibility of the user
 if age >= 18:
     print(f"\nCongratulations {name}! You are eligible for voting.")
     print("\nHere is a list of political parties to join.")
 
+    # Display the parties
     for party in parties:
         print("\t", party)
 
+    # Get user input for the party they wish to join
     chosen_party = input("\nWhat party would you like to vote : ").title().strip()
 
+    # Print a message specific to the party chosen
     if chosen_party in parties:
         print(f"\nCongratulations you have joined {chosen_party} party")
         if chosen_party == "Republican" or chosen_party == "Democratic":
@@ -57,5 +64,6 @@ if age >= 18:
         else:
             print("\nThat is not a major party.")
 
+# If the user is younger than 18, print not eligible to register for vote
 else:
     print("\nYou are not old enough to register for a vote")
