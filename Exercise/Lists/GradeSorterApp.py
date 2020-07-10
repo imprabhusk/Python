@@ -22,7 +22,7 @@ Step By Step Guide:
 ● Use at least 2 comments to describe sections of your code.
 ● “Chunk” your code so that is readable.
 ● Use appropriate and informative variable names.
-● Format your output as below.
+● Format your output.
 
 """
 
