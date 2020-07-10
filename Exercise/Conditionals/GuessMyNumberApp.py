@@ -49,7 +49,7 @@ for guess_number in range(5):
     else:
         break
 
-# Format the output for winning and loosing.
+# Format the output for winning and losing.
 if guess == number:
     print(f"\nGood Job, {name}! You guessed my number in {guess_number + 1} guesses.")
 else:
