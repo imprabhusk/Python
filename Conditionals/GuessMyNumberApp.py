@@ -32,7 +32,6 @@ import random
 
 print("Welcome to Guess My Number App")
 
-# Get user name
 name = input("\nWhat is your name : ").title().strip()
 print(f"\nHello {name}, I am thinking of a number between 1 and 20.")
 
