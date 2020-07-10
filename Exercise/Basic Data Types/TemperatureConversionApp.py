@@ -35,7 +35,7 @@ temperature_in_celsius = (5 / 9) * (temperature_in_fahrenheit - 32)
 # temperature conversion to kelvin
 temperature_in_kelvin = temperature_in_celsius + 273.15
 
-# Formatting output
+# Format output
 print(f"\nDegrees in Fahrenheit is {round(temperature_in_fahrenheit, 4)}")
 print(f"\nDegrees in Celsius is {round(temperature_in_celsius, 4)}")
 print(f"\nDegrees in Kelvin is {round(temperature_in_kelvin, 4)}")
