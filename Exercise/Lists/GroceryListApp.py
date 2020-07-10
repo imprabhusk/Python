@@ -68,7 +68,7 @@ print("Welcome to the Grocery List App")
 print(f"\nCurrent Date : {day}/{month}/{year} - {hour} hour {minute} minute")
 print(f"\nYou currently have {foods[0]} and {foods[1]} in your Grocery List")
 
-# Get user input
+# Get user input and append it to list
 food = input("\nType the food to add to the grocery list: ")
 foods.append(food.title())
 food = input("Type the food to add to the grocery list: ")
@@ -92,7 +92,7 @@ print(f"Removing {buy_food} from the list...")
 print("\nSimulating grocery shopping...")
 print(f"\nCurrent grocery list: {len(foods)} items")
 print(foods)
-buy_food = input("What food did you just buy: ").title()
+buy_food = input("\nWhat food did you just buy: ").title()
 foods.remove(buy_food)
 print(f"Removing {buy_food} from the list...")
 
@@ -111,5 +111,5 @@ print(f"\nSorry, the store is out of {no_item}.")
 new_food = input("What food would you like instead: ").title()
 foods.insert(0, new_food)
 
-print("\nHere is what remains on your grocery list: ")
-print(foods)
+# Format the output
+print(f"\nHere is what remains on your grocery list: {foods}")
