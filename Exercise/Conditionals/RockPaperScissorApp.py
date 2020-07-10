@@ -127,6 +127,7 @@ print(f"Player Score\t\t : {player_score}")
 print(f"Computer Score\t\t : {computer_score}")
 print("------------------------------")
 
+# Announcing the winner of the game
 if player_score > computer_score:
     print(f"\nCongratulations {name}, You won the match against Computer")
     print("You prooved that human brain is better than computer brain")
