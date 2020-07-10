@@ -27,3 +27,27 @@ Step by Step Guide:
 ● Format your output.
 
 """
+
+import random
+
+print("Welcome to Guess My Number App")
+
+name = input("\nWhat is your name : ").title().strip()
+print(f"\nHello {name}, I am thinking of a number between 1 and 20.")
+
+number = random.randint(1, 20)
+
+for guess_number in range(5):
+    guess = int(input("\nTake your guess : "))
+
+    if guess < number:
+        print("Your guess is too low.")
+    elif guess > number:
+        print("Your guess is too High.")
+    else:
+        break
+
+if guess == number:
+    print(f"\nGood Job, {name}! You guessed my number in {guess_number + 1} guesses.")
+else:
+    print(f"\nGame Over. The number I was thinking is : {number}.")
