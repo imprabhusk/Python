@@ -78,7 +78,9 @@ for num in hexadecimal[lower_range - 1 : upper_range]:
 
 # Format the output
 input(f"\nPress Enter to see all values from 1 to {max_value}.")
+
 print("\nDecimal\t\tBinary\t\tHexadecimal")
 print("-------------------------------------------")
 for d, b, h in zip(decimal, binary, hexadecimal):
     print(f"{d}\t\t{b}\t\t{h}")
+print("-------------------------------------------")
