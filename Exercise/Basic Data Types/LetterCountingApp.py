@@ -47,5 +47,5 @@ letter = letter.lower()
 # Count the letter in a message
 letter_count = message.count(letter)
 
-# Formatting the output
+# Format the output
 print(f"\n{name}, your message has {letter_count} {letter}'s in it.")
