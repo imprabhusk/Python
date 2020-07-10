@@ -27,6 +27,7 @@ Step by Step Guide:
 ● Format your output as below.
 
 """
+
 import math
 
 print("Welcome to Right Triangle Solver App")
