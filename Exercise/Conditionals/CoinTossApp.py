@@ -51,13 +51,12 @@ import random
 print("Welcome to Coin Toss App")
 print("\nI will flip a coin a set number of times")
 
-# Get user input
 flip_number = int(input("\nHow many times would you like to flip the coin : "))
 choice = input("Would you like to see the result of each filp : ").lower()
 
 print("\nFlipping\n")
 
-# Initialize variables
+# Initialize heads and tails variables
 heads = 0
 tails = 0
 
