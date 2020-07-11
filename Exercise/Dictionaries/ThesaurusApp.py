@@ -6,4 +6,37 @@ Based on the users choice, you will randomly present them with a synonym for
 their chosen word. Lastly, your program will display all of the potential
 synonyms for each word in the thesaurus.
 
+Step by Step Guide:
+
+● Create a dictionary called "thesaurus".
+    ○ You must have a minimum of four keys in the dictionary.
+    ○ Each key should be a ​string​ of a word of your choice.
+    ○ The associated values for each key should be a ​list ​containing five synonyms for
+      the key.
+● For example, my dictionary includes:
+    "hot":['balmy', 'summery', 'tropical', 'boiling', 'scorching'], "cold":['chilly',
+    'cool','freezing', 'frigid', 'polar'], "happy":['content', 'cheery', 'merry',
+    'jovial', 'jocular'], "sad":['unhappy', 'downcast', 'miserable', 'glum',
+    'melancholy'],
+● Print a welcome message.
+● Print what words are in your thesaurus.
+    ○ This is represented by the keys of your dictionary
+● Ask the user what word they would like to get a synonym for.
+● If the users choice is in the thesaurus:
+    ○ Chose a random synonym from the list containing the synonyms for the word.
+        ■ Type import random as the first line of your program.
+    ○ Display the information.
+● Else, the word is not in the dictionary:
+    ○ Inform the user.
+● Ask the user if they would like to see the whole thesaurus.
+    ○ This is represented by both the keys and values.
+● If yes:
+    ○ Display the whole dictionary following the format below.
+● Else:
+    ○ Print a goodbye message
+● Use at least 2 comments to describe sections of your code.
+● “Chunk” your code so that is readable.
+● Use appropriate and informative variable names.
+● Format your output.
+
 """
