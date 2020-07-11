@@ -54,7 +54,7 @@ print("Welcome to the Thesaurus App")
 print("\nChoose the word from the thesaurus and i will give you the synonym")
 print("\nHere are the words in thesaurus")
 
-# list of words in synonym
+# list all keys in thesaurus
 for key in thesaurus.keys():
     print("\t", key)
 
