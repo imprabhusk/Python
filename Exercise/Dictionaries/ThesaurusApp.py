@@ -53,11 +53,14 @@ thesaurus = {
 print("Welcome to the Thesaurus App")
 print("\nChoose the word from the thesaurus and i will give you the synonym")
 print("\nHere are the words in thesaurus")
+
+# list of words in synonym
 for key in thesaurus.keys():
     print("\t", key)
 
 word = input("\nWhat word would you like to get the synonym for : ")
 
+# provide some random synonym
 if word in thesaurus.keys():
     index = random.randint(0, 4)
     print(f"The synonym for the word {word} is : {thesaurus[word][index]}")
@@ -66,12 +69,16 @@ else:
         f"I'm sorry, Synonym for the word {word} currently doesn't exists on thesaurus."
     )
 
+# Ask the user whether they want to see the whole thesaurus
 choice = input("\nWould you like to see the whole thesaurus (yes/no) : ").lower()
 
+# show all the values in thesaurus
 if choice.startswith("y"):
     for key, values in thesaurus.items():
         print(f"\nSynonym for {key} are : ")
         for value in values:
             print("\t", value)
+
+
 else:
     print("Thanks for using Thesaurus App. Hope You have enjoyed the program. GoodBye!")
