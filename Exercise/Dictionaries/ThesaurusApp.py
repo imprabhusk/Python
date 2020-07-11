@@ -79,6 +79,6 @@ if choice.startswith("y"):
         for value in values:
             print("\t", value)
 
-
+# Greet the user and format the output
 else:
     print("Thanks for using Thesaurus App. Hope You have enjoyed the program. GoodBye!")
