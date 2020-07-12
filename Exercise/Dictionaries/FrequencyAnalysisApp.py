@@ -83,6 +83,7 @@ from collections import Counter
 
 print("Welcome to Frequency Analysis App")
 
+# list of elements to remove from all text for analysis
 non_letters = [
     "1",
     "2",
@@ -112,19 +113,23 @@ non_letters = [
     "\t",
 ]
 
+# Information for the first key_phrase_1
 key_phrase_1 = (
     input("\nEnter a word or phrase to count the occurence of each letter : ")
     .lower()
     .strip()
 )
 
+# Removing all the non letters from key_phase_1
 for non_letter in non_letters:
     key_phrase_1 = key_phrase_1.replace(non_letter, "")
 
 total_occurences = len(key_phrase_1)
 
+# create the counter object to tally the number of each letter
 letter_count = Counter(key_phrase_1)
 
+# Determine the frequency analysis of for the message
 print("\nHere is the frequency analysis from key phrase 1 : ")
 print("\n\tLetter\t\tOccurence\tPercentage")
 for key, value in sorted(letter_count.items()):
@@ -132,28 +137,34 @@ for key, value in sorted(letter_count.items()):
     percentage = round(percentage, 2)
     print(f"\t{key}\t\t{value}\t\t{percentage}%\t")
 
+# Make a list of letters from highest occurrence to lowest
 ordered_letter_count = letter_count.most_common()
 key_phrase_1_ordered_letters = []
 for pair in ordered_letter_count:
     key_phrase_1_ordered_letters.append(pair[0])
 
+# Print and format the list
 print("\nLetters ordered from highest occurence to lowest")
 for letter in key_phrase_1_ordered_letters:
     print(letter, end="")
 
+# Information for the first key_phrase_2
 key_phrase_2 = (
     input("\n\nEnter a word or phrase to count the occurence of each letter : ")
     .lower()
     .strip()
 )
 
+# Removing all the non letters from key_phase_2
 for non_letter in non_letters:
     key_phrase_2 = key_phrase_2.replace(non_letter, "")
 
 total_occurences = len(key_phrase_2)
 
+# create the counter object to tally the number of each letter
 letter_count = Counter(key_phrase_2)
 
+# Determine the frequency analysis of for the message
 print("Here is the frequency analysis from key phrase 1 : ")
 print("\n\tLetter\t\tOccurence\tPercentage")
 for key, value in sorted(letter_count.items()):
@@ -161,11 +172,13 @@ for key, value in sorted(letter_count.items()):
     percentage = round(percentage, 2)
     print(f"\t{key}\t\t{value}\t\t{percentage}%")
 
+# Make a list of letters from highest occurrence to lowest
 ordered_letter_count = letter_count.most_common()
 key_phrase_2_ordered_letters = []
 for pair in ordered_letter_count:
     key_phrase_2_ordered_letters.append(pair[0])
 
+# Print and format the list
 print("\nLetters ordered from highest occurence to lowest")
 for letter in key_phrase_2_ordered_letters:
     print(letter, end="")
