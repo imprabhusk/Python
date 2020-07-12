@@ -78,3 +78,94 @@ time.
 ● Format your output.
 
 """
+
+from collections import Counter
+
+print("Welcome to Frequency Analysis App")
+
+non_letters = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
+    " ",
+    ".",
+    "?",
+    "!",
+    ",",
+    '"',
+    "'",
+    ";",
+    ":",
+    "(",
+    ")",
+    "%",
+    "$",
+    "#",
+    "\n",
+    "\t",
+]
+
+key_phrase_1 = (
+    input("\nEnter a word or phrase to count the occurence of each letter : ")
+    .lower()
+    .strip()
+)
+
+for non_letter in non_letters:
+    key_phrase_1 = key_phrase_1.replace(non_letter, "")
+
+total_occurences = len(key_phrase_1)
+
+letter_count = Counter(key_phrase_1)
+
+print("\nHere is the frequency analysis from key phrase 1 : ")
+print("\n\tLetter\t\tOccurence\tPercentage")
+for key, value in sorted(letter_count.items()):
+    percentage = 100 * value / total_occurences
+    percentage = round(percentage, 2)
+    print(f"\t{key}\t\t{value}\t\t{percentage}%\t")
+
+ordered_letter_count = letter_count.most_common()
+key_phrase_1_ordered_letters = []
+for pair in ordered_letter_count:
+    key_phrase_1_ordered_letters.append(pair[0])
+
+print("\nLetters ordered from highest occurence to lowest")
+for letter in key_phrase_1_ordered_letters:
+    print(letter, end="")
+
+key_phrase_2 = (
+    input("\n\nEnter a word or phrase to count the occurence of each letter : ")
+    .lower()
+    .strip()
+)
+
+for non_letter in non_letters:
+    key_phrase_2 = key_phrase_2.replace(non_letter, "")
+
+total_occurences = len(key_phrase_2)
+
+letter_count = Counter(key_phrase_2)
+
+print("Here is the frequency analysis from key phrase 1 : ")
+print("\n\tLetter\t\tOccurence\tPercentage")
+for key, value in sorted(letter_count.items()):
+    percentage = 100 * value / total_occurences
+    percentage = round(percentage, 2)
+    print(f"\t{key}\t\t{value}\t\t{percentage}%")
+
+ordered_letter_count = letter_count.most_common()
+key_phrase_2_ordered_letters = []
+for pair in ordered_letter_count:
+    key_phrase_2_ordered_letters.append(pair[0])
+
+print("\nLetters ordered from highest occurence to lowest")
+for letter in key_phrase_2_ordered_letters:
+    print(letter, end="")
