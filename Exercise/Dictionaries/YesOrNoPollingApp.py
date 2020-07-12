@@ -60,7 +60,6 @@ Step by Step Guide:
 
 """
 
-
 print("Welcome to Yes or No Polling App")
 
 issue = input("\nWhat is the yes or no issue you will be voting on today : ")
