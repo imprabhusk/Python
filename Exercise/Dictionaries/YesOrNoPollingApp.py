@@ -59,3 +59,63 @@ Step by Step Guide:
 ● Format your output.
 
 """
+
+
+print("Welcome to Yes or No Polling App")
+
+issue = input("\nWhat is the yes or no issue you will be voting on today : ")
+vote_number = int(input("What is the number of voters you will allow on the issue : "))
+password = input("\nEnter a password for polling results : ")
+
+yes = 0
+no = 0
+results = {}
+
+# Simulate voting process
+for i in range(vote_number):
+    name = input("\nEnter your full name : ").title().strip()
+
+    if name in results.keys():
+        print("Sorry, it seems that someone with this name has already voted")
+    else:
+        print(f"\nHere is our issue {issue}")
+        choice = input("What would you think (yes or no) : ").lower().strip()
+        vote = choice
+
+        if choice == "yes" or choice == "y":
+            choice = yes
+            yes += 1
+        elif choice == "no" or choice == "n":
+            choice = no
+            no += 1
+        else:
+            print("That is not a yes or no answer, but okay")
+
+        results[name] = vote
+        print(f"\nThank you {name}! Your vote {results[name]} has been recorded.")
+
+# Show who actually voted
+total_votes = len(results.keys())
+print(f"\nThe following {total_votes} people voted.\n")
+for key in results.keys():
+    print(key)
+
+# Summarize the voting the results
+print(f"\nOn the following issue : {issue}")
+if yes > no:
+    print(f"Yes wins! {yes} votes to {no}")
+elif no > yes:
+    print(f"No wins! {no} votes to {yes}")
+else:
+    print(f"It was a tie {yes} votes to {no} votes.")
+
+guess = input("\nTo see the voting results enter the admin password : ")
+
+# Allow the admin to see the actual votes
+if guess == password:
+    for key, value in results.items():
+        print(f"Voter : {key} \t\t Vote : {value}")
+else:
+    print("Sorry, that is not the correct password. Goodbye...!")
+
+print("\nThank you for using Yes or No Issue Polling App")
