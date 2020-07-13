@@ -138,6 +138,7 @@ from collections import Counter
 
 print("Welcome to the Code Breaker App")
 
+# List of non letters to remove from all texts for analytics
 non_letters = [
     "1",
     "2",
@@ -168,6 +169,7 @@ non_letters = [
     "\t",
 ]
 
+# Hard Code a pre-determined key_phrase_1 for communication purpose
 key_phrase_1 = """
 To Sherlock Holmes she is always the woman. I have seldom heard him mention
 her under any other name. In his eyes she eclipses and predominates the whole
@@ -204,12 +206,14 @@ readers of the daily press, I knew little of my former friend and companion.
 """
 key_phrase_1 = key_phrase_1.lower()
 
+# Removing all non letters from key_phrase_1
 for non_letter in non_letters:
     key_phrase_1 = key_phrase_1.replace(non_letter, "")
 
 total_occurences = len(key_phrase_1)
 letter_count = Counter(key_phrase_1)
 
+# Determine the frequency analysis for the message
 print("\nHere is the frequency analysis from key phrase 1 : ")
 print("\n\tLetter\t\tOccurence\tPercentage")
 for key, value in sorted(letter_count.items()):
@@ -228,6 +232,7 @@ print("\nLetters ordered from highest occurence to lowest :")
 for letter in key_phrase_1_ordered_letters:
     print(letter, end="")
 
+# Hard Code a pre-determined key_phrase_2 for communication
 key_phrase_2 = """
 Quite so! You have not observed. And yet you have seen. That is just my point.
 Now, I know that there are seventeen steps, because I have both seen and
@@ -253,12 +258,14 @@ bought under half a crown a packet. It is peculiarly strong and stiff.
 """
 key_phrase_2 = key_phrase_2.lower()
 
+# Removing all non letters from key_phrase_2
 for non_letter in non_letters:
     key_phrase_2 = key_phrase_2.replace(non_letter, "")
 
 total_occurences = len(key_phrase_2)
 letter_count = Counter(key_phrase_2)
 
+# Determine the frequency analysis fo the message
 print("\nHere is the frequency analysis from key phrase 2 : ")
 print("\n\tLetter\t\tOccurence\tPercentage")
 for key, value in sorted(letter_count.items()):
@@ -271,16 +278,19 @@ key_phrase_2_ordered_letters = []
 for pair in ordered_letter_count:
     key_phrase_2_ordered_letters.append(pair[0])
 
+# Print and format the results
 print("\nLetters ordered from highest occurence to lowest :")
 for letter in key_phrase_2_ordered_letters:
     print(letter, end="")
 
+# Encode/Decode the given message using key_phrase_1 and key_phrase_2
 choice = input("\nWould you like to encode or decode a message : ").lower()
 phrase = input("What is the phrase : ").lower()
 
 for non_letter in non_letters:
     phrase = phrase.replace(non_letter, "")
 
+# users wants to encode a message
 if choice == "encode":
     encoded_phrase = []
     for letter in phrase:
@@ -292,6 +302,7 @@ if choice == "encode":
     for letter in encoded_phrase:
         print(letter, end="")
 
+# user wants to decode a message
 elif choice == "decode":
     decoded_phrase = []
     for letter in phrase:
@@ -303,9 +314,11 @@ elif choice == "decode":
     for letter in decoded_phrase:
         print(letter, end="")
 
+# user entered invalid option
 else:
     print("\nInvalid Option. Please type 'encode' or 'decode'.")
 
+# Greet the user and format the output
 print(
     "\nThanks for using Code Breaker App. Hope you have enjoyed encoding and decoding \
 functionality"
