@@ -108,6 +108,7 @@ non_letters = [
     ")",
     "%",
     "$",
+    "&",
     "#",
     "\n",
     "\t",
@@ -165,7 +166,7 @@ total_occurences = len(key_phrase_2)
 letter_count = Counter(key_phrase_2)
 
 # Determine the frequency analysis of for the message
-print("Here is the frequency analysis from key phrase 1 : ")
+print("\nHere is the frequency analysis from key phrase 2 : ")
 print("\n\tLetter\t\tOccurence\tPercentage")
 for key, value in sorted(letter_count.items()):
     percentage = 100 * value / total_occurences
