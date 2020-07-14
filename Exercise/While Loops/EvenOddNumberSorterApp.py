@@ -47,3 +47,41 @@ would return a list [‘1’, ‘2’, ‘3’, ‘4’, ‘5’].
 ● Format your output.
 
 """
+
+print("Welcome to Even Or Odd Number Sorter App")
+
+running = True
+
+while running:
+    number_string = input("\nEnter in a string of numbers separated by a comma (,) : ")
+    number_string = number_string.replace(" ", "")
+    number_list = number_string.split(",")
+
+    evens = []
+    odds = []
+
+    print("\nResult Summary\n")
+    for number in number_list:
+        number = int(number)
+        if number % 2 == 0:
+            evens.append(number)
+            print(f"{number} is Even.")
+        else:
+            odds.append(number)
+            print(f"{number} is Odd.")
+
+    evens.sort()
+    odds.sort()
+
+    print("\nThe following numbers are even : ")
+    for even in evens:
+        print(even)
+
+    print("\nThe following numbers are odd : ")
+    for odd in odds:
+        print(odd)
+
+    choice = input("\nWould you like to continue (y/n) : ").lower()
+    if choice != "y":
+        running = False
+        print("\nThank you for using Even Odd Number Sorter App. See You later.")
