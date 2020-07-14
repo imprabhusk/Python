@@ -71,7 +71,6 @@ Step by Step Guide:
             ● This is how long your calculation took.
             ● Round this value to 4 decimal places.
         ■ Print a summary of the amount of time the calculations took.
-        ■ Prompt the user to press enter to continue
         ■ Print all of the found prime numbers.
     ○ Else:
         ■ The user entered a value other than 1 or 2.
@@ -92,36 +91,44 @@ import time
 print("Welcome to Prime Number App")
 
 running = True
-while running:
 
+# Run the program as long as the user wants.
+while running:
     print("\nEnter 1 to determine if a specific number is prime. ")
     print("Enter 2 to determine all prime number within a set range. ")
 
     option = int(input("\nEnter your choice 1 or 2 : "))
 
+    # Determine the entered single number is prime or not.
     if option == 1:
         number = int(input("\nEnter a number to determine if it is prime or not : "))
 
+        # prime status check
         prime_status = True
         for i in range(2, number // 2):
             if number % i == 0:
                 prime_status = False
                 break
 
+        # Print summary
         if prime_status:
             print(f"{number} is a Prime Number")
         else:
             print(f"{number} is Not a Prime Number")
 
+    # Determine primes within range of values and time calculations.
     elif option == 2:
         lower_bound = int(input("\nEnter the lower bound of your range : "))
         upper_bound = int(input("Enter the upper bound of your range : "))
 
         primes = []
 
+        # Get the current time
         start_time = time.time()
 
+        # Check prime status of all the number within lower and upper bounds.
         for prime_candidate in range(lower_bound, upper_bound + 1):
+            # 1 is not prime number
             if prime_candidate > 1:
                 prime_status = True
                 for i in range(2, prime_candidate):
@@ -131,11 +138,14 @@ while running:
             else:
                 prime_status = False
 
+            # Prime candidate is infact prime
             if prime_status:
                 primes.append(prime_candidate)
 
+        # Get the current time
         end_time = time.time()
 
+        # Calculate the time taken for computation process
         delta_time = round(end_time - start_time, 4)
         print(f"\nCongratulations, It took a total of {delta_time} seconds.")
         print(
@@ -145,9 +155,11 @@ while running:
         for prime in primes:
             print(prime)
 
+    # If user entered invalid option.
     else:
         print("\nThat's not a valid option.")
 
+    # Ask the user whether they wish to continue or to quit the app.
     choice = input("\nWould you like to run the program again (y/n) : ").lower()
     if choice != "y":
         running = False
