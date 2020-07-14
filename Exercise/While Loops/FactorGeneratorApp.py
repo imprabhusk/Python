@@ -48,24 +48,29 @@ print("Welcome to the Factor Generator App")
 
 running = True
 
+# Run the program untill the user quits
 while running:
     number = int(
         input("\nEnter a number to determine all the factors of that number : ")
     )
 
+    # Find the factors for the given number
     factors = []
     for i in range(1, number + 1):
         if number % i == 0:
             factors.append(i)
 
+    # Print out the factors
     print(f"\nFactors of {number} are : ")
     for factor in factors:
         print(factor)
 
+    # Print a summary of the factors automatically
     print("\nIn Summary")
     for i in range(int(math.ceil(len(factors) / 2))):
         print(f"{factors[i]} * {factors[-i-1]} = {number}")
 
+    # Ask the user if they would like to quit or continue
     choice = input("\nRun Again (y/n) : ").lower()
     if choice != "y":
         running = False
