@@ -52,14 +52,17 @@ print("Welcome to Even Or Odd Number Sorter App")
 
 running = True
 
+# Run the program as long as user wants.
 while running:
     number_string = input("\nEnter in a string of numbers separated by a comma (,) : ")
     number_string = number_string.replace(" ", "")
     number_list = number_string.split(",")
 
+    # Initialize the list to hold even/odd values.
     evens = []
     odds = []
 
+    # Calculate whether the number is even or odd.
     print("\nResult Summary\n")
     for number in number_list:
         number = int(number)
@@ -70,17 +73,21 @@ while running:
             odds.append(number)
             print(f"{number} is Odd.")
 
+    # Sort the lists evens and odds.
     evens.sort()
     odds.sort()
 
+    # show the even numbers.
     print("\nThe following numbers are even : ")
     for even in evens:
         print(even)
 
+    # show the odd numbers.
     print("\nThe following numbers are odd : ")
     for odd in odds:
         print(odd)
 
+    # Ask the user whether they wish to continue or quit the program.
     choice = input("\nWould you like to continue (y/n) : ").lower()
     if choice != "y":
         running = False
