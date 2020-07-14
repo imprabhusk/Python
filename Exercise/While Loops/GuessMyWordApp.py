@@ -81,3 +81,62 @@ Step by Step Guide:
 ● Format your output.
 
 """
+
+import random
+
+print("Welcome to Guess My Word App")
+
+game_dict = {
+    "sports": ["basketball", "baseball", "soccer", "football", "tennis", "curling"],
+    "colors": ["orange", "yellow", "purple", "aquamarine", "violet", "gold"],
+    "fruits": ["apple", "banana", "watermelon", "peach", "mango", "strawberry"],
+    "classes": ["english", "history", "science", "mathematics", "physics", "computer"],
+}
+
+game_keys = []
+
+for keys in game_dict.keys():
+    game_keys.append(keys)
+
+playing = True
+
+while playing:
+    game_category = game_keys[random.randint(0, len(game_keys) - 1)]
+    game_word = game_dict[game_category][
+        random.randint(0, len(game_dict[game_category]) - 1)
+    ]
+
+    blank_word = []
+    for letter in game_word:
+        blank_word.append("-")
+
+    print(blank_word)
+    print(
+        f"\nGuess a {len(game_word)} letter word from the following category : \
+{game_category.title()}"
+    )
+
+    guess = ""
+    guess_count = 0
+
+    while guess != game_word:
+        print("".join(blank_word))
+        guess = input("\nEnter your guess : ").lower()
+        guess_count += 1
+
+        if guess == game_word:
+            print(f"\nCorrect! You guessed the word in {guess_count} guesses.")
+            break
+        else:
+            print("That's not correct. Let us reveal a letter to help you!")
+            swapping = True
+            while swapping:
+                letter_index = random.randint(0, len(game_word) - 1)
+                if blank_word[letter_index] == "-":
+                    blank_word[letter_index] = game_word[letter_index]
+                    swapping = False
+    choice = input("\nWould you like to play again (y/n) : ").lower()
+
+    if choice != "y":
+        playing = False
+        print("\nThank you for playing guess my word game. Hope you have enjoyed.")
