@@ -86,6 +86,7 @@ import random
 
 print("Welcome to Guess My Word App")
 
+# create a dictionary to hold our words
 game_dict = {
     "sports": ["basketball", "baseball", "soccer", "football", "tennis", "curling"],
     "colors": ["orange", "yellow", "purple", "aquamarine", "violet", "gold"],
@@ -93,19 +94,21 @@ game_dict = {
     "classes": ["english", "history", "science", "mathematics", "physics", "computer"],
 }
 
+# Take keys from dictionary and put it in game_keys list
 game_keys = []
-
 for keys in game_dict.keys():
     game_keys.append(keys)
 
+# Game begins
 playing = True
-
 while playing:
+    # Randomly pick the game category and game word from the game dictionary
     game_category = game_keys[random.randint(0, len(game_keys) - 1)]
     game_word = game_dict[game_category][
         random.randint(0, len(game_dict[game_category]) - 1)
     ]
 
+    # Build a dashed '-' word to represent the game word
     blank_word = []
     for letter in game_word:
         blank_word.append("-")
@@ -119,14 +122,19 @@ while playing:
     guess = ""
     guess_count = 0
 
+    # A single round loop
     while guess != game_word:
+        # Get a single guess from the user
         print("".join(blank_word))
         guess = input("\nEnter your guess : ").lower()
         guess_count += 1
 
+        # Guess is correct user won the game
         if guess == game_word:
             print(f"\nCorrect! You guessed the word in {guess_count} guesses.")
             break
+
+        # Guess is incorrect, user must keep guessing
         else:
             print("That's not correct. Let us reveal a letter to help you!")
             swapping = True
@@ -135,8 +143,9 @@ while playing:
                 if blank_word[letter_index] == "-":
                     blank_word[letter_index] = game_word[letter_index]
                     swapping = False
-    choice = input("\nWould you like to play again (y/n) : ").lower()
 
+    # Ask the user whether they wish to play again or quit the game.
+    choice = input("\nWould you like to play again (y/n) : ").lower()
     if choice != "y":
         playing = False
         print("\nThank you for playing guess my word game. Hope you have enjoyed.")
