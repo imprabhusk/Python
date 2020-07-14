@@ -23,7 +23,7 @@ Step by Step Guide:
     ○ Print a summary which shows how the factors multiply together to get the
       users number using a for loop.
         ■ The first element in your list will pair with the last element.
-            ● factors[0] an factors[-1]
+            ● factors[0] and factors[-1]
         ■ The second element will pair with the second to last element.
             ● factors[1] and factors[-2]
         ■ The third element will pair with the third to last element.
@@ -41,3 +41,32 @@ Step by Step Guide:
 ● Format your output.
 
 """
+
+import math
+
+print("Welcome to the Factor Generator App")
+
+running = True
+
+while running:
+    number = int(
+        input("\nEnter a number to determine all the factors of that number : ")
+    )
+
+    factors = []
+    for i in range(1, number + 1):
+        if number % i == 0:
+            factors.append(i)
+
+    print(f"\nFactors of {number} are : ")
+    for factor in factors:
+        print(factor)
+
+    print("\nIn Summary")
+    for i in range(int(math.ceil(len(factors) / 2))):
+        print(f"{factors[i]} * {factors[-i-1]} = {number}")
+
+    choice = input("\nRun Again (y/n) : ").lower()
+    if choice != "y":
+        running = False
+        print("\nThank you for using Factor Generator App. GoodBye!")
