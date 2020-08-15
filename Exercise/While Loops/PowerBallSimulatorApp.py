@@ -104,7 +104,7 @@ Step By Step Guide:
         ■ Increase the number of purchased tickets by 1.
         ■ Add it to the list of tickets sold,
         ■ Print the ticket as a list.
-    ○ Else:  
+    ○ Else
         ■ Print a message that a losing ticket was generated that has already
           been purchased and that the ticket is being disregarded.
     ○ After picking the number of tickets in ticket_interval, which can be
@@ -128,3 +128,92 @@ Step By Step Guide:
 ● Format your output.
 
 """
+
+import random
+
+print("Welcome to Power Ball Simulator App")
+
+white_balls = int(
+    input(
+        "\nHow many white-balls to draw from for the 5 winning numbers\
+ (Normally 69) : "
+    )
+)
+
+if white_balls < 5:
+    white_balls = 5
+
+red_balls = int(
+    input(
+        "How many red-balls to draw from for the Power-Ball\
+ (Normally 26) : "
+    )
+)
+
+if red_balls < 1:
+    red_balls = 1
+
+odds = 1
+for i in range(5):
+    odds *= white_balls - i
+odds *= red_balls / 120
+
+print(f"\nYou have a 1 in {odds} chance of winning this lottery.")
+
+ticket_interval = int(input("\nPurchase tickets in what interval : "))
+
+winning_numbers = []
+while len(winning_numbers) < 5:
+    number = random.randint(1, white_balls)
+    if number not in winning_numbers:
+        winning_numbers.append(number)
+
+winning_numbers.sort()
+
+number = random.randint(1, red_balls)
+winning_numbers.append(number)
+
+print("\nWelcome to the power ball game")
+print("\nTonight's winning numbers are : ", end="")
+for number in winning_numbers:
+    print(f"{number}", end=" ")
+
+input("\nPress 'Enter' to begin purchasing tickets!!! ")
+
+tickets_purchased = 0
+active = True
+tickets_sold = []
+
+while winning_numbers not in tickets_sold and active is True:
+    lottery_numbers = []
+    while len(lottery_numbers) < 5:
+        number = random.randint(1, white_balls)
+        if number not in lottery_numbers:
+            lottery_numbers.append(number)
+
+    lottery_numbers.sort()
+
+    number = random.randint(1, red_balls)
+    lottery_numbers.append(number)
+
+    if lottery_numbers not in tickets_sold:
+        tickets_purchased += 1
+        tickets_sold.append(lottery_numbers)
+        print(lottery_numbers)
+    else:
+        print("Losing ticket generated : disregard...")
+
+    if tickets_purchased % ticket_interval == 0:
+        print(f"{tickets_purchased} tickets purchased so far with no winners.")
+        choice = input("\nKeep Purchasing tickets (y/n) : ")
+        if choice != "y":
+            active = False
+
+if lottery_numbers == winning_numbers:
+    print("\nWinning Ticket Numbers : ", end="")
+    for number in lottery_numbers:
+        print(f"{number}", end="")
+    print(f"\nPurchased a total of {tickets_purchased} tickets.")
+else:
+    print(f"\nYou bought {tickets_purchased} tickets and still lost!")
+    print("\nBetter Luck Next Time.")
