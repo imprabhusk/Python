@@ -53,16 +53,38 @@ import random
 
 
 def dice_sides():
+    """Ask the user how many sides on their dice.
+
+    Returns:
+        [int]: [returns the sides of the dice]
+    """
+
     sides = int(input("\nHow many sides would you like on your dice: "))
     return sides
 
 
 def dice_number():
+    """Ask the user how many dice to roll.
+
+    Returns:
+        [int]: [returns the number of dice to roll]
+    """
+
     number = int(input("\nHow many dice would you like to roll : "))
     return number
 
 
 def roll_dice(sides, number):
+    """Simulate rolling the dice
+
+    Args:
+        sides ([int]): [accepts the sides of the dice]
+        number ([int]): [accepts the number of dice to roll]
+
+    Returns:
+        [list]: [returns the list of random values from the dice]
+    """
+
     dice = []
     print(f"\nYou rolled {number} {sides} sided dice.")
     print("\n..........Results are as followed..........")
@@ -74,6 +96,12 @@ def roll_dice(sides, number):
 
 
 def sum_dice(dice):
+    """Add all values of dice in a list
+
+    Args:
+        dice ([list]): [accepts the list of values from dice]
+    """
+
     total = 0
     for die in dice:
         total += die
@@ -81,6 +109,11 @@ def sum_dice(dice):
 
 
 def roll_again():
+    """Ask the user to roll again
+
+    Returns:
+        [bool]: [returns the choice of the user]
+    """
     choice = input("\nWould you like to roll again (y/n) : ")
     if choice != "y":
         roll = False
